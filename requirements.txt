@@ -2,7 +2,7 @@ pandas
 matplotlib
 numpy
 plotly
-altair
+altair==5.2.0
 streamlit
 google-generativeai
 python-dotenv
