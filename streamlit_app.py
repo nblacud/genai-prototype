@@ -1,6 +1,6 @@
 import os
-#from google import genai
-#from google.genai import types
+from google import genai
+from google.genai import types
 from dotenv import load_dotenv # Only needed if using the .env file method
 import streamlit as st
 import re
