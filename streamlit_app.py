@@ -1,14 +1,15 @@
 import os
-from google import genai
+from google import genai # importo para usar gemini
 from google.genai import types
 from dotenv import load_dotenv # Only needed if using the .env file method
 import streamlit as st
-import re
+import re #se utilza para limpiar los datos
 import pandas as pd
 
 # da la respuesta anterior si es que ya se hizo la misma consulta
 # ayuda a la rapidez y que no se gasten muchos tokens. 
 @st.cache_data 
+
 def get_response(user_prompt, temperature):
      response = client.models.generate_content(
             model="gemini-2.5-pro",
@@ -27,7 +28,6 @@ def clean_text(text):
 
 # Helper function to get dataset path
 def get_dataset_path():
-    
     # Get the current script directory
     current_dir = os.path.dirname(os.path.abspath(__file__))
     # Construct the path to the CSV file
