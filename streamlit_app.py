@@ -12,7 +12,7 @@ import pandas as pd
 
 def get_response(user_prompt, temperature):
      response = client.models.generate_content(
-            model="gemini-2.5-pro",
+            model="gemini-2.0-flash-lite",
             contents=user_prompt,
             config=types.GenerateContentConfig(
                 temperature=temperature, # lower = more deterministic, higher = more creative
